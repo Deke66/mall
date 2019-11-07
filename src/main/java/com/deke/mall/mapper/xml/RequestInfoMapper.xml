@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.deke.mall.mapper.RequestInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.deke.mall.entity.RequestInfo">
+        <id column="id" property="id" />
+        <result column="application_id" property="applicationId" />
+        <result column="trace_no" property="traceNo" />
+        <result column="class_name" property="className" />
+        <result column="method_name" property="methodName" />
+        <result column="spend_ms" property="spendMs" />
+        <result column="status" property="status" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, application_id, trace_no, class_name, method_name, spend_ms, status
+    </sql>
+
+</mapper>
