@@ -3,6 +3,7 @@ package com.deke.mall.aop;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
@@ -12,7 +13,8 @@ import java.time.LocalDateTime;
 
 @Component
 @Slf4j
-@Order(0)
+@Order(1)
+@Aspect
 public class CalculateTimeSpendAspect {
 
     @Pointcut("@annotation(com.deke.mall.aop.annotation.CalculateMethodExecTime)")
